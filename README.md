@@ -1,6 +1,6 @@
-# sbomrisk
+# SBOM Supply Chain Risk Scoring
 
-Prototype for the CS 690 Graduate Research Project "SBOM Supply Chain Risk Scoring: A Contextual Component Risk Ranking Framework" by William A. Davis (advisor: Dr. Omar Ochoa), Embry-Riddle Aeronautical University, Fall 2026.
+This repository holds the prototype tool, called sbomrisk, for the CS 690 Graduate Research Project "SBOM Supply Chain Risk Scoring: A Contextual Component Risk Ranking Framework" by William A. Davis (advisor: Dr. Omar Ochoa), Embry-Riddle Aeronautical University, Fall 2026.
 
 The tool reads CycloneDX SBOMs and rebuilds each application's dependency graph. In later phases it will add vulnerability data and rank components with a rule-based weighted score, compared against a CVSS-only baseline.
 
