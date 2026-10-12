@@ -1,0 +1,465 @@
+[
+    {
+        "package": {
+            "key": "argon2-cffi",
+            "package_name": "argon2-cffi",
+            "installed_version": "21.3.0"
+        },
+        "dependencies": [
+            {
+                "key": "argon2-cffi-bindings",
+                "package_name": "argon2-cffi-bindings",
+                "installed_version": "21.2.0",
+                "required_version": "Any"
+            }
+        ]
+    },
+    {
+        "package": {
+            "key": "argon2-cffi-bindings",
+            "package_name": "argon2-cffi-bindings",
+            "installed_version": "21.2.0"
+        },
+        "dependencies": [
+            {
+                "key": "cffi",
+                "package_name": "cffi",
+                "installed_version": "1.15.1",
+                "required_version": ">=1.0.1"
+            }
+        ]
+    },
+    {
+        "package": {
+            "key": "asgiref",
+            "package_name": "asgiref",
+            "installed_version": "3.6.0"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "certifi",
+            "package_name": "certifi",
+            "installed_version": "2022.12.7"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "cffi",
+            "package_name": "cffi",
+            "installed_version": "1.15.1"
+        },
+        "dependencies": [
+            {
+                "key": "pycparser",
+                "package_name": "pycparser",
+                "installed_version": "2.21",
+                "required_version": "Any"
+            }
+        ]
+    },
+    {
+        "package": {
+            "key": "charset-normalizer",
+            "package_name": "charset-normalizer",
+            "installed_version": "3.0.1"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "crispy-bootstrap4",
+            "package_name": "crispy-bootstrap4",
+            "installed_version": "2022.1"
+        },
+        "dependencies": [
+            {
+                "key": "django",
+                "package_name": "Django",
+                "installed_version": "4.1.7",
+                "required_version": ">=3.2"
+            },
+            {
+                "key": "django-crispy-forms",
+                "package_name": "django-crispy-forms",
+                "installed_version": "2.0",
+                "required_version": ">=1.14.0"
+            }
+        ]
+    },
+    {
+        "package": {
+            "key": "cryptography",
+            "package_name": "cryptography",
+            "installed_version": "39.0.1"
+        },
+        "dependencies": [
+            {
+                "key": "cffi",
+                "package_name": "cffi",
+                "installed_version": "1.15.1",
+                "required_version": ">=1.12"
+            }
+        ]
+    },
+    {
+        "package": {
+            "key": "defusedxml",
+            "package_name": "defusedxml",
+            "installed_version": "0.7.1"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "dj-database-url",
+            "package_name": "dj-database-url",
+            "installed_version": "0.5.0"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "django",
+            "package_name": "Django",
+            "installed_version": "4.1.7"
+        },
+        "dependencies": [
+            {
+                "key": "asgiref",
+                "package_name": "asgiref",
+                "installed_version": "3.6.0",
+                "required_version": ">=3.5.2,<4"
+            },
+            {
+                "key": "sqlparse",
+                "package_name": "sqlparse",
+                "installed_version": "0.3.1",
+                "required_version": ">=0.2.2"
+            }
+        ]
+    },
+    {
+        "package": {
+            "key": "django-allauth",
+            "package_name": "django-allauth",
+            "installed_version": "0.52.0"
+        },
+        "dependencies": [
+            {
+                "key": "django",
+                "package_name": "Django",
+                "installed_version": "4.1.7",
+                "required_version": ">=2.0"
+            },
+            {
+                "key": "pyjwt",
+                "package_name": "PyJWT",
+                "installed_version": "2.4.0",
+                "required_version": ">=1.7"
+            },
+            {
+                "key": "python3-openid",
+                "package_name": "python3-openid",
+                "installed_version": "3.2.0",
+                "required_version": ">=3.0.8"
+            },
+            {
+                "key": "requests",
+                "package_name": "requests",
+                "installed_version": "2.28.2",
+                "required_version": "Any"
+            },
+            {
+                "key": "requests-oauthlib",
+                "package_name": "requests-oauthlib",
+                "installed_version": "1.3.1",
+                "required_version": ">=0.3.0"
+            }
+        ]
+    },
+    {
+        "package": {
+            "key": "django-crispy-forms",
+            "package_name": "django-crispy-forms",
+            "installed_version": "2.0"
+        },
+        "dependencies": [
+            {
+                "key": "django",
+                "package_name": "Django",
+                "installed_version": "4.1.7",
+                "required_version": ">=3.2"
+            }
+        ]
+    },
+    {
+        "package": {
+            "key": "django-heroku",
+            "package_name": "django-heroku",
+            "installed_version": "0.3.1"
+        },
+        "dependencies": [
+            {
+                "key": "dj-database-url",
+                "package_name": "dj-database-url",
+                "installed_version": "0.5.0",
+                "required_version": ">=0.5.0"
+            },
+            {
+                "key": "django",
+                "package_name": "Django",
+                "installed_version": "4.1.7",
+                "required_version": "Any"
+            },
+            {
+                "key": "psycopg2",
+                "package_name": "psycopg2",
+                "installed_version": "2.9.3",
+                "required_version": "Any"
+            },
+            {
+                "key": "whitenoise",
+                "package_name": "whitenoise",
+                "installed_version": "6.2.0",
+                "required_version": "Any"
+            }
+        ]
+    },
+    {
+        "package": {
+            "key": "idna",
+            "package_name": "idna",
+            "installed_version": "3.4"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "mccabe",
+            "package_name": "mccabe",
+            "installed_version": "0.6.1"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "oauthlib",
+            "package_name": "oauthlib",
+            "installed_version": "3.2.2"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "packaging",
+            "package_name": "packaging",
+            "installed_version": "26.3"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "pillow",
+            "package_name": "Pillow",
+            "installed_version": "9.4.0"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "pip",
+            "package_name": "pip",
+            "installed_version": "26.0.1"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "pipdeptree",
+            "package_name": "pipdeptree",
+            "installed_version": "2.28.0"
+        },
+        "dependencies": [
+            {
+                "key": "packaging",
+                "package_name": "packaging",
+                "installed_version": "26.3",
+                "required_version": ">=24.1"
+            },
+            {
+                "key": "pip",
+                "package_name": "pip",
+                "installed_version": "26.0.1",
+                "required_version": ">=24.2"
+            }
+        ]
+    },
+    {
+        "package": {
+            "key": "psycopg2",
+            "package_name": "psycopg2",
+            "installed_version": "2.9.3"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "pycodestyle",
+            "package_name": "pycodestyle",
+            "installed_version": "2.7.0"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "pycparser",
+            "package_name": "pycparser",
+            "installed_version": "2.21"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "pyflakes",
+            "package_name": "pyflakes",
+            "installed_version": "2.3.1"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "pyjwt",
+            "package_name": "PyJWT",
+            "installed_version": "2.4.0"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "python3-openid",
+            "package_name": "python3-openid",
+            "installed_version": "3.2.0"
+        },
+        "dependencies": [
+            {
+                "key": "defusedxml",
+                "package_name": "defusedxml",
+                "installed_version": "0.7.1",
+                "required_version": "Any"
+            }
+        ]
+    },
+    {
+        "package": {
+            "key": "pytz",
+            "package_name": "pytz",
+            "installed_version": "2020.1"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "pyyaml",
+            "package_name": "PyYAML",
+            "installed_version": "5.1"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "requests",
+            "package_name": "requests",
+            "installed_version": "2.28.2"
+        },
+        "dependencies": [
+            {
+                "key": "certifi",
+                "package_name": "certifi",
+                "installed_version": "2022.12.7",
+                "required_version": ">=2017.4.17"
+            },
+            {
+                "key": "charset-normalizer",
+                "package_name": "charset-normalizer",
+                "installed_version": "3.0.1",
+                "required_version": ">=2,<4"
+            },
+            {
+                "key": "idna",
+                "package_name": "idna",
+                "installed_version": "3.4",
+                "required_version": ">=2.5,<4"
+            },
+            {
+                "key": "urllib3",
+                "package_name": "urllib3",
+                "installed_version": "1.26.9",
+                "required_version": ">=1.21.1,<1.27"
+            }
+        ]
+    },
+    {
+        "package": {
+            "key": "requests-oauthlib",
+            "package_name": "requests-oauthlib",
+            "installed_version": "1.3.1"
+        },
+        "dependencies": [
+            {
+                "key": "oauthlib",
+                "package_name": "oauthlib",
+                "installed_version": "3.2.2",
+                "required_version": ">=3.0.0"
+            },
+            {
+                "key": "requests",
+                "package_name": "requests",
+                "installed_version": "2.28.2",
+                "required_version": ">=2.0.0"
+            }
+        ]
+    },
+    {
+        "package": {
+            "key": "sqlparse",
+            "package_name": "sqlparse",
+            "installed_version": "0.3.1"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "urllib3",
+            "package_name": "urllib3",
+            "installed_version": "1.26.9"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "werkzeug",
+            "package_name": "Werkzeug",
+            "installed_version": "2.1.2"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "whitenoise",
+            "package_name": "whitenoise",
+            "installed_version": "6.2.0"
+        },
+        "dependencies": []
+    },
+    {
+        "package": {
+            "key": "zipp",
+            "package_name": "zipp",
+            "installed_version": "3.8.0"
+        },
+        "dependencies": []
+    }
+]
