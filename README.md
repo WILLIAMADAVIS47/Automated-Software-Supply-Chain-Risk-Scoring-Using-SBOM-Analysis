@@ -6,11 +6,11 @@ The tool reads CycloneDX SBOMs and rebuilds each application's dependency graph.
 
 ## Documents
 
-All project documents are Word files in the `docs` folder:
+All project documents are Word files in the `docs` folder, listed in the order the work was done:
 
-- D1 Scoring Specification
 - Task B Tool Selection
 - Task C Test Projects
+- D1 Scoring Specification
 - Validation Report
 - Setup and Run Guide (start here to install and run the tool)
 
