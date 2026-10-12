@@ -16,6 +16,8 @@ All project documents are Word files in the `docs` folder, listed in the order t
 
 ## Quick start (Windows PowerShell)
 
+Open PowerShell inside the project folder (the one that contains pyproject.toml), then run
+
 ```
 py -m venv .venv
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
