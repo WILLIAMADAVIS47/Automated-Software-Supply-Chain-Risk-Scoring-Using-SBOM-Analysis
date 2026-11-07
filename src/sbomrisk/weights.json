@@ -1,0 +1,7 @@
+{
+  "severity": 0.30,
+  "exploit_probability": 0.25,
+  "known_exploitation": 0.20,
+  "depth": 0.15,
+  "age": 0.10
+}

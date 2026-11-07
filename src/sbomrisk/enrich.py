@@ -18,6 +18,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -42,6 +43,10 @@ KEV_FEED = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulne
 QUALITATIVE_SEVERITY = {"CRITICAL": 0.95, "HIGH": 0.80, "MODERATE": 0.55, "MEDIUM": 0.55, "LOW": 0.25}
 
 USER_AGENT = f"sbomrisk/{__version__} (CS 690 Graduate Research Project)"
+
+
+class NVDUnavailable(Exception):
+    """NVD answered no CVE at all, which in practice means a rejected API key; nothing is written."""
 
 
 class OfflineMiss(Exception):
@@ -366,6 +371,8 @@ def enrich(graph: DependencyGraph, fetcher: Fetcher, analysis_date: str | None =
     progress(f"fetching CVSS from NVD for {n_cves} CVEs" + ("" if fetcher.nvd_api_key else
              " (no NVD API key, so this is paced at about 6 seconds per CVE)"))
     add_nvd(fetcher, all_vulns)
+    if n_cves >= 5 and not any(v.cvss is not None for v in all_vulns):
+        raise NVDUnavailable(f"NVD returned no CVSS score for any of {n_cves} CVEs")
 
     progress("fetching EPSS scores and the CISA KEV catalog")
     today = date.today().isoformat()
@@ -410,8 +417,18 @@ def enrich(graph: DependencyGraph, fetcher: Fetcher, analysis_date: str | None =
     }
 
 
+NVD_KEY_SHAPE = re.compile(r"[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}")
+
+
 def default_nvd_key() -> str | None:
     return os.environ.get("NVD_API_KEY") or None
+
+
+def nvd_key_problem(key: str | None) -> str | None:
+    """NVD keys are UUIDs; anything else (such as a placeholder left in a command) is rejected by NVD."""
+    if key and not NVD_KEY_SHAPE.fullmatch(key.strip()):
+        return f"NVD_API_KEY is set to {key!r}, which is not an NVD API key (they look like 0000aaaa-00aa-...)"
+    return None
 
 
 def print_summary(result: dict, out=None) -> None:
