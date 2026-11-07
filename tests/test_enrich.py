@@ -149,3 +149,11 @@ def test_cli_enrich_offline_writes_output(run, capsys):
     assert code == 0
     assert json.loads(out.read_text())["summary"]["in_kev"] == 1
     assert "in CISA KEV: 1" in capsys.readouterr().out
+
+
+def test_placeholder_nvd_key_is_refused(tmp_path, monkeypatch, capsys):
+    monkeypatch.setenv("NVD_API_KEY", "your-key")
+    sbom = tmp_path / "test.cdx.json"
+    sbom.write_text(json.dumps(DOC))
+    assert cli.main(["enrich", str(sbom), "--cache-dir", str(tmp_path / "cache")]) == 5
+    assert "not an NVD API key" in capsys.readouterr().err
