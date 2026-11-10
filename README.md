@@ -6,7 +6,7 @@ The tool reads CycloneDX SBOMs, rebuilds each application's dependency graph, an
 
 ## Documents
 
-All project documents are Word files in the `docs` folder, listed in the order the work was done:
+All project documents are in the `docs` folder, listed in the order the work was done:
 
 - Task B Tool Selection
 - Task C Test Projects
@@ -14,6 +14,7 @@ All project documents are Word files in the `docs` folder, listed in the order t
 - Validation Report
 - D2 Prototype Implementation
 - Setup and Run Guide (start here to install and run the tool)
+- D3 Evaluation Results
 
 ## Quick start (Windows PowerShell)
 
@@ -34,14 +35,14 @@ The enrich command needs internet access. It saves every answer it receives in a
 
 The rank command scores the components found by the most recent enrich run and writes the ranking (JSON and CSV), the CVSS-only baseline, the components that were not ranked, and a run record into the same results folder. The default weights are in `src/sbomrisk/weights.json`; `--weights other.json` runs with different ones.
 
-Once all four test projects have been enriched, `sbomrisk evaluate` compares each ranking with its baseline (top-ten differences and Kendall's tau), runs the 20-run weight sensitivity analysis for each project, and writes the results to `results\evaluation-<date>`.
+Once the test projects have been enriched, `sbomrisk evaluate` compares each ranking with its baseline (top-ten differences and Kendall's tau), runs the 20-run weight sensitivity analysis for each project, and writes the results to `results\evaluation-<date>`.
 
 ## Folder layout
 
 - `src/sbomrisk`: the parser, dependency graph, vulnerability enrichment, scoring and ranking, evaluation and command-line tool
 - `tests`: automated tests and a small hand-built SBOM
-- `scripts`: SBOM generation, PyGoat root fix and validation scripts
-- `data/sboms`: SBOMs for the four test projects
+- `scripts`: SBOM generation, root component fix and validation scripts
+- `data/sboms`: SBOMs for the six test projects (Juice Shop, Etherpad and Wiki.js in JavaScript, Gitea in Go, PyGoat in Python, WebGoat in Java)
 - `data/tables`: dependency depth tables for each project (CSV files that open in Excel)
 - `data/validation`: package manager reference outputs used for validation
 - `docs`: project documents

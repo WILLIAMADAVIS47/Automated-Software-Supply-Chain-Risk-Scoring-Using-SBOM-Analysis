@@ -122,7 +122,7 @@ def overall(projects: list[dict]) -> dict:
     meaningful = [p for p in projects if p["differentiation"]["top10_meaningful"]]
     diff_pass = [p["project"] for p in meaningful if p["differentiation"]["top10_new_entries"] >= 3]
     return {
-        "differentiation_target": "at least 3 of 10 different in at least 3 of the 4 projects",
+        "differentiation_target": "at least 3 of 10 different in at least 3 projects",
         "differentiation_met_in": diff_pass,
         "differentiation_met": len(diff_pass) >= 3,
         "justification_met": all(p["differentiation"]["all_entering_justified"] for p in projects),

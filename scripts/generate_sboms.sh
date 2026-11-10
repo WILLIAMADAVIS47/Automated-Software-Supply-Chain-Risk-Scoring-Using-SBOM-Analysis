@@ -55,4 +55,27 @@ GOBIN="$WORK/bin" go install "github.com/CycloneDX/cyclonedx-gomod/cmd/cyclonedx
 (cd "$WORK/gitea" && "$WORK/bin/cyclonedx-gomod" app -json -licenses=false -main . \
   -output "$OUT/gitea-v1.21.0.cdx.json")
 
+echo "== Etherpad 1.8.6 (npm), added Nov 2026 at the advisor's request as a fifth, larger project"
+clone ether/etherpad-lite 1.8.6 etherpad
+(cd "$WORK/etherpad/src" \
+  && npm install --package-lock-only --ignore-scripts --no-audit --no-fund \
+  && npx --yes "@cyclonedx/cyclonedx-npm@$CYCLONEDX_NPM" --package-lock-only --omit dev \
+       --spec-version 1.5 --output-format JSON --output-file "$OUT/etherpad-v1.8.6.cdx.json")
+
+echo "== Wiki.js v2.5.300 (npm), added Nov 2026 as a sixth, larger project"
+clone requarks/wiki v2.5.300 wikijs
+# The tag ships a yarn.lock; npm needs --legacy-peer-deps to resolve it, and cyclonedx-npm then reports
+# peer-dependency warnings (graphql, mysql2), so the root component is restored by name afterwards.
+(cd "$WORK/wikijs" \
+  && npm install --package-lock-only --ignore-scripts --no-audit --no-fund --legacy-peer-deps \
+  && npx --yes "@cyclonedx/cyclonedx-npm@$CYCLONEDX_NPM" --package-lock-only --omit dev --ignore-npm-errors \
+       --spec-version 1.5 --output-format JSON --output-file "$OUT/wikijs-v2.5.300.cdx.json")
+python3 - "$OUT/wikijs-v2.5.300.cdx.json" <<'PY'
+import json, sys
+p = sys.argv[1]
+d = json.loads(open(p).read().replace('"DummyComponent.RootComponent"', '"wiki@2.5.300"'))
+d["metadata"]["component"].update({"name": "wiki", "version": "2.5.300"})
+json.dump(d, open(p, "w"), indent=2)
+PY
+
 echo "Done. SBOMs in $OUT"
