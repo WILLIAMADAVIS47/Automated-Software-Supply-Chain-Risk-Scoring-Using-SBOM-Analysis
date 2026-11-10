@@ -16,6 +16,7 @@ All project documents are in the `docs` folder, listed in the order the work was
 - Setup and Run Guide (start here to install and run the tool)
 - D3 Evaluation Results
 - D4 Final Report
+- GRP Presentation (defense slides)
 
 ## Quick start (Windows PowerShell)
 
