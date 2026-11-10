@@ -15,6 +15,7 @@ All project documents are in the `docs` folder, listed in the order the work was
 - D2 Prototype Implementation
 - Setup and Run Guide (start here to install and run the tool)
 - D3 Evaluation Results
+- D4 Final Report
 
 ## Quick start (Windows PowerShell)
 
